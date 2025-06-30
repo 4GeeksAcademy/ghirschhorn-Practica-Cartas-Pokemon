@@ -1,35 +1,81 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartas Pokemon</title>
+
+  <!-- Fontawesome is our recomended library for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Titulo -->
+    <div class="row">
+
+      <div class="col-6. mx-auto text-center">
+        <h1>ENCUENTRA TU POKÉMON</h1>
       </div>
+
     </div>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+    <!-- Botones -->
+    <div class="row">
+
+      <div class="col-6 d-flex mx-auto mt-3">
+
+        <!--Dropdown Filro por Tipo-->
+        <div class="dropdown">
+          <button class="btn btn-secondary btn-sm dropdown-toggle me-3" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Filtra por tipo
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Panta</a></li>
+            <li><a class="dropdown-item" href="#">Fuego</a></li>
+            <li><a class="dropdown-item" href="#">Agua</a></li>
+            <li><a class="dropdown-item" href="#">Tierra</a></li>
+            <li><a class="dropdown-item" href="#">Veneno</a></li>
+            <li><a class="dropdown-item" href="#">Bicho</a></li>
+            <li><a class="dropdown-item" href="#">Hada</a></li>
+            <li><a class="dropdown-item" href="#">Volador</a></li>
+            <li><a class="dropdown-item" href="#">Eléctrico</a></li>
+            <li><a class="dropdown-item" href="#">Normal</a></li>
+          </ul>
+        </div>
+
+        <!--Input Buscar por nombre-->
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Busca por nombre</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--Menú y Carta-->
+    <div class="row">
+
+      <div class="col-4" id="poke-list"></div>
+
+      <div class="col-4" id="poke-card"></div>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+  <script type="module" src="/app.js"></script>
+</body>
+
 </html>
