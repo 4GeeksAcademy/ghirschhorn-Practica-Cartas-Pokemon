@@ -14,7 +14,7 @@
 
 <body>
 
-  <div class="container">
+  <div class="container p-5">
 
     <!-- Titulo -->
     <div class="row">
@@ -28,7 +28,7 @@
     <!-- Botones -->
     <div class="row">
 
-      <div class="col-6 d-flex mx-auto mt-3">
+      <div class="col-md-6 d-flex mx-auto mt-3">
 
         <!--Dropdown Filro por Tipo-->
         <div class="dropdown">
@@ -64,9 +64,53 @@
     <!--Menú y Carta-->
     <div class="row">
 
-      <div class="col-4" id="poke-list"></div>
+      <div class="col-md-4 mt-5">
+        <!--Menu Pokémon-->
+        <ul class="list-group poke-list" style="max-height: 300px; overflow-y: auto;">
+          <li class="list-group-item" id="bulbasaur">Bulbasaur</li>
+          <li class="list-group-item" id="charmander">Charmander</li>
+          <li class="list-group-item" id="squirtle">Squirtle</li>
+          <li class="list-group-item" id="caterpie">Caterpie</li>
+          <li class="list-group-item" id="weedle">Weedle</li>
+          <li class="list-group-item" id="pidgey">Pidgey</li>
+          <li class="list-group-item" id="rattata">Rattata</li>
+          <li class="list-group-item" id="spearow">Spearow</li>
+          <li class="list-group-item" id="pikachu">Pikachu</li>
+          <li class="list-group-item" id="sandshrew">Sandshrew</li>
+          <li class="list-group-item" id="nidoran-fem">Nidoran (Femenino)</li>
+          <li class="list-group-item" id="nidoran-masc">Nidoran (Masculino)</li>
+          <li class="list-group-item" id="clefairy">Clefairy</li>
+          <li class="list-group-item" id="vulpix">Vulpix</li>
+          <li class="list-group-item" id="jigglypuff">Jigglypuff</li>
+          <li class="list-group-item" id="zubat">Zubat</li>
+          <li class="list-group-item" id="oddish">Oddish</li>
+          <li class="list-group-item" id="paras">Paras</li>
+          <li class="list-group-item" id="venonat">Venonat</li>
+          <li class="list-group-item" id="diglett">Diglett</li>
+        </ul>
 
-      <div class="col-4" id="poke-card"></div>
+      </div>
+
+      <div class="col-md-8 mt-5">
+        <div class="card h-50 p4" id="card-box" style="min-height: 400px;">
+          <div class="card-body">
+
+            <h3 class="card-name" id="poke-name">SELECCIONA UN POKÉMON</h3>
+            <img id="poke-img" src="" alt="" class="image-fluid d-none" style="height: 250px;">
+
+            <div class="poke-content" style="height: 200px;">
+              <p class="card-text" id="poke-desc">Haz click en el nombre para ver los detalles.</p>
+              <div id="poke-details">
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
 
     </div>
 

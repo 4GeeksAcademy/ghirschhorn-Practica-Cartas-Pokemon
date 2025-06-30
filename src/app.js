@@ -100,7 +100,7 @@ window.onload = function () {
     },
     {
       id: 29,
-      nombre: "Nidoran:signo_femenino:",
+      nombre: "Nidoran (Femenino)",
       tipo: ["Veneno"],
       nivel: 5,
       habilidades: ["Gruñido", "Doble Bofetón"],
@@ -109,7 +109,7 @@ window.onload = function () {
     },
     {
       id: 32,
-      nombre: "Nidoran:signo_masculino:",
+      nombre: "Nidoran (Masculino)",
       tipo: ["Veneno"],
       nivel: 5,
       habilidades: ["Picotazo Veneno", "Gruñido"],
