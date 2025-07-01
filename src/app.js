@@ -176,16 +176,18 @@ window.onload = function () {
   console.log(pokemones);
   const listItems = document.querySelectorAll(".poke-list li");
   const pokeName = document.getElementById("poke-name");
-  const pokeDesc = document.querySelector("#poke-desc")
-  const pokeDetails = document.getElementById("poke-details");
+  const pokeType = document.querySelector("#poke-type")
+  const pokeHability = document.getElementById("poke-hability");
+  const pokeLevel = document.getElementById("poke-level");
   const pokeImg = document.getElementById("poke-img");
+  const pokeStats = document.querySelector("#poke-stats");
 
   listItems.forEach(item => {
     item.addEventListener("click", () => {
       const pokeKey = item.id;
       const pokeElijo = pokemones[pokeKey];
       console.log(pokeElijo);
-      
+
 
       listItems.forEach(i => i.classList.remove("active"));
 
@@ -193,13 +195,50 @@ window.onload = function () {
 
 
       pokeName.textContent = pokeElijo.nombre;
-      pokeDesc.textContent = "Tipo: " + pokeElijo.tipo;
-      pokeDetails.textContent = "Habilidades: " + pokeElijo.habilidades
+      pokeType.textContent = "Tipo: " + pokeElijo.tipo;
+      pokeHability.textContent = "Habilidades: " + pokeElijo.habilidades
+      pokeLevel.textContent = "Nivel: " + pokeElijo.nivel
 
+      const stats = pokeElijo.stats;
+      pokeStats.textContent = `HP: ${stats.hp}, Ataque: ${stats.ataque}, Defensa: ${stats.defensa}, Velocidad: ${stats.velocidad}`;
 
+      pokeImg.src = pokeElijo.imagen
+      pokeImg.classList.remove("d-none")
 
     })
   })
+
+  //Busqueda en input
+  const searchInput = document.querySelector(".input-group input");
+
+  searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    
+    for (let key in pokemones) {
+      if (pokemones[key].nombre.toLowerCase() === searchTerm) {
+        const pokeElijo = pokemones[key];
+
+        
+        listItems.forEach(i => {
+          i.classList.remove("active");
+          if (i.id === key) i.classList.add("active");
+        });
+
+        pokeName.textContent = pokeElijo.nombre;
+        pokeType.textContent = "Tipo: " + pokeElijo.tipo;
+        pokeHability.textContent = "Habilidades: " + pokeElijo.habilidades;
+        pokeLevel.textContent = "Nivel: " + pokeElijo.nivel;
+        pokeStats.textContent = `HP: ${pokeElijo.stats.hp}, Ataque: ${pokeElijo.stats.ataque}, Defensa: ${pokeElijo.stats.defensa}, Velocidad: ${pokeElijo.stats.velocidad}`;
+        pokeImg.src = pokeElijo.imagen;
+        pokeImg.classList.remove("d-none");
+
+        break;
+      }
+    }
+  });
+
+
 
 };
 

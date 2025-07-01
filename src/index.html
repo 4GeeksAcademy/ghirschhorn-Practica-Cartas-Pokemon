@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="./assets/img/4geeks.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cartas Pokemon</title>
+  <title>Encuentra tu Pokemon</title>
 
   <!-- Fontawesome is our recomended library for icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-md-6 d-flex mx-auto mt-3">
 
-        <!--Dropdown Filro por Tipo-->
+        <!--Dropdown Filro por Tipo // NO FUNCIONA AUN-->
         <div class="dropdown">
           <button class="btn btn-secondary btn-sm dropdown-toggle me-3" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -60,7 +60,7 @@
     <div class="row">
       <div class="col-md-4 mt-5">
         <!--Menu Pokémon-->
-        <ul class="list-group poke-list" style="max-height: 400px; overflow-y: auto;">
+        <ul class="list-group poke-list" style="max-height: 400px; overflow-y: auto; border-radius: 20px;">
           <li class="list-group-item" id="bulbasaur">Bulbasaur</li>
           <li class="list-group-item" id="charmander">Charmander</li>
           <li class="list-group-item" id="squirtle">Squirtle</li>
@@ -88,14 +88,15 @@
         <div class="card h-50 p4" id="card-box" style="min-height: 400px;">
           <div class="card-body">
 
-            <h3 class="card-name" id="poke-name">SELECCIONA UN POKÉMON</h3>
-            <img id="poke-img" src="" alt="" class="image-fluid d-none" style="height: 250px;">
+            <h3 class="card-name" id="poke-name">SELECCIONA O BUSCA UN POKÉMON</h3>
+            <img id="poke-img" src="" alt="" class="image-fluid d-none" style="height: 150px;">
 
             <div class="poke-content" style="height: 200px;">
-              <p class="card-text" id="poke-desc">Haz click en el nombre para ver los detalles.</p>
-              <div id="poke-details">
-
-              </div>
+              <p class="card-text" id="poke-type">Haz click en el nombre para ver los detalles.</p>
+              <p id="poke-level"></p>
+              <p id="poke-hability"></p>
+              <p id="poke-stats"></p>
+              
             </div>
           </div>
         </div>
